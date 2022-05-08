@@ -10,7 +10,7 @@ import { Page1PageModule } from '../page1/page1.module';
 import { Page3PageModule } from '../page3/page3.module';
 import { Page2PageModule } from '../page2/page2.module';
 import { Page4PageModule } from '../page4/page4.module';
-
+//import { DayPipe } from '../pipes/day.pipe';
 
 @NgModule({
   imports: [
@@ -22,8 +22,7 @@ import { Page4PageModule } from '../page4/page4.module';
     Page1PageModule,
     Page2PageModule,
     Page3PageModule,
-    Page4PageModule
-
+    Page4PageModule,
   ],
   declarations: [HomePage]
 })
