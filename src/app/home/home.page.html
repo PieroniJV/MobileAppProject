@@ -1,20 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+<ion-header class="ion-no-border" no-border>
+  <ion-toolbar color="primary" mode="ios">
+    <ion-title color="tertiary">
+      Best Weather App 
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<super-tabs activeTabIndex="1" [config]="{ debug: true, sideMenu: 'left', allowElementScroll: true, nativeSmoothScroll: true }">
+  <super-tabs-toolbar slot="top">
+    <super-tab-button>
+      <ion-label>Dublin</ion-label>
+    </super-tab-button>
+    <super-tab-button>
+      <ion-label>New York</ion-label>
+    </super-tab-button>
+    <super-tab-button>
+      <ion-label>Melbourne</ion-label>
+    </super-tab-button>
+    <super-tab-button>
+      <ion-label>China</ion-label>
+    </super-tab-button>
+  </super-tabs-toolbar>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <super-tabs-container autoScrollTop>
+    <super-tab>
+      <ion-content>
+        <ion-nav [root]="page1Page"></ion-nav>
+      </ion-content>
+    </super-tab>
+    <super-tab>
+      <ion-content>
+        <ion-nav [root]="page2Page"></ion-nav>
+      </ion-content>
+    </super-tab>
+    <super-tab>
+      <ion-content>
+        <ion-nav [root]="page3Page"></ion-nav>
+      </ion-content>
+    </super-tab>
+    <super-tab>
+      <ion-content>
+        <ion-nav [root]="page4Page"></ion-nav>
+      </ion-content>
+    </super-tab>
+  </super-tabs-container>
+</super-tabs>
